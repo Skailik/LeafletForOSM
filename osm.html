@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenStreetMap</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	
+	
+	<link rel="stylesheet" href="leaflet/leaflet.css" />
+	<script src="leaflet/leaflet.js"></script>
+
+<style>
+    html, body {
+        height: 100%;
+		width: 100%; 
+        margin: 0;
+        padding: 0;
+      }
+	
+   #map {
+   height: 100%;
+   width: 100%;
+   }
+   
+</style>
+</head>
+  
+<body onload="start();">
+
+	<div id='map'></div>
+
+	<script>
+
+		function start() {
+		
+		var map;
+  
+		map = L.map('map', {center: [52.2999,104.2513],zoom: 13});
+	  
+		L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a rel=\"nofollow\" href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors'
+		}).addTo(map);
+	}
+	</script>
+	
+</body>
+</html>
